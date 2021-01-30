@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+
+.mudancaTamanho{
+  max-width: 1500px; 
+  margin: 0 auto;
+}
