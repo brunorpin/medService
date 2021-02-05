@@ -1,11 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-</head>
-<body>
-    <h1>Bem vindo ao Cadastro</h1>
-</body>
-</html>
+<%- include('./partials/head'); %>
+<%- include('./partials/header'); %>
+
+<div class="container">
+  <div class="boxCadastro">
+      <div class="styleBox">
+      </div>
+      <h3 style="text-align:center">Cadastro</h3>
+      <br>
+      <label>Nome</label>
+      <br>
+      <input class="styleInput" type="name" placeholder="Digite seu Nome">
+      <br>
+      <label for="">Email</label>
+      <br>
+      <input class="styleInput" type="email" placeholder="Digite seu e-mail">
+      <br>
+      <br>
+      <label>Senha</label>
+      <br>
+      <input class="styleInput" type="password" placeholder="Digite sua senha">
+      <br>
+      <br>
+      <label for="estado">Estado</label>
+      <select name="estado" id="" class="tamanhoUF">
+        <option selected disabled>Selecione o Estado</option>
+        <option value="SP">São Paulo</option>
+      </select>
+      <br>
+      <button type="submit" class="styleButtonEnviar" >Criar Conta</button>
+      <br>
+      <button type="reset" class="styleButtonLimpar" >Limpar</button>
+      <br>
+      <button class="styleButtonCancelar">Cancelar</button>
+      
+    </div>
+</div>
+    
+<%- include('./partials/footer'); %>
