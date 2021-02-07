@@ -1,37 +1,73 @@
 <%- include('./partials/head'); %>
 <%- include('./partials/header'); %>
 
-<div class="container">
+<!-- Tela de Cadastro do Voce
+Utilizamos o containerVoce antes container para gerar o css
+styleBox será padrão para todas as telas com botões -->
+<div class="containerCadastro">
   <div class="boxCadastro">
       <div class="styleBox">
       </div>
       <h3 style="text-align:center">Cadastro</h3>
       <br>
-      <label>Nome</label>
+
+      <!-- Selecionar quem será atendido voce ou outro paciente -->
+      <h4 style="text-align: center;">Quem será atendido?</h4>
       <br>
-      <input class="styleInput" type="name" placeholder="Digite seu Nome">
-      <br>
-      <label for="">Email</label>
-      <br>
-      <input class="styleInput" type="email" placeholder="Digite seu e-mail">
-      <br>
-      <br>
-      <label>Senha</label>
-      <br>
-      <input class="styleInput" type="password" placeholder="Digite sua senha">
+      <input type="button" value="Você" id="voce" name="selecao">
+      <input type="button" value="Outro Paciente" id="outroPaciente" name="selecao">
       <br>
       <br>
-      <label for="estado">Estado</label>
+
+      <!-- Se selecionado outro paciente perguntar se é menor de idade -->
+      <label for="idade">É menor de idade?</label>
+      <br>
+      <input type="radio" id="simMenor" name="menorIdade" value="simMenor"><label for="simMenor">Sim</label>
+      <input type="radio" id="naoMenor" name="menorIdade" value="naoMenor" checked><label for="naoMenor">Não</label>
+      <br>
+
+      <!-- Se Sim informar dados do responsavel -->
+      <input class="styleInput" type="name" placeholder="Nome completo da Criança" id="nameChild">
+      <input class="styleInput" type="text" name="CPF" placeholder="CPF ou RG da Criança" id="CPFChild">
+      <input class="styleInput" type="name" placeholder="Nome completo do responsável" id="nameResponsavel">
+      <input class="styleInput" type="email" placeholder="E-mail" id="email">
+      <input class="styleInput" type="password" placeholder="Digite sua senha" id="password">
+      <input class="styleInput" type="text" name="CPF" placeholder="CPF do responsável" id="CPFResponsavel">
+      <input class="styleInput" type="tel" name="tel1" id="telefone1" placeholder="Telefone Principal">
+      <input class="styleInput" type="tel" name="tel2" id="telefone2" placeholder="Telefone Secundário">
+
+
+      <!-- Se NAO informar apenas os dados do paciente -->
+      <input class="styleInput" type="name" placeholder="Nome completo" id="nameResponsavel">
+      <input class="styleInput" type="email" placeholder="E-mail" id="email">
+      <input class="styleInput" type="password" placeholder="Digite sua senha" id="password">
+      <input class="styleInput" type="text" name="CPF" placeholder="CPF" id="CPFResponsavel">
+      <input class="styleInput" type="text" name="RG" placeholder="RG" id="RGResponsavel">
+      <input class="styleInput" type="tel" name="tel1" id="telefone1" placeholder="Telefone Principal">
+      <input class="styleInput" type="tel" name="tel2" id="telefone2" placeholder="Telefone Secundário">
+
+
+      <!-- Endereço independente se menor ou nao, ou outro paciente -->
+      <br>
+      <label for="endereco" style="text-align: center;"><b>Endereço</b></label>
+      <br>
       <select name="estado" id="" class="tamanhoUF">
         <option selected disabled>Selecione o Estado</option>
         <option value="SP">São Paulo</option>
       </select>
+      <input class="styleInput" type="text" name="city" id="cidade" placeholder="Cidade">
+      <input class="styleInput" type="text" name="ruaAv" id="ruaAV" placeholder="Rua | Avenidade">
+      <input class="styleInput" type="text" name="number" id="number" placeholder="Número">
+      <input class="styleInput" type="text" name="complemento" id="complemento" placeholder="Complemento">
       <br>
+      <br>
+      <br>
+      <!-- Botão Enviar/Limpar/Cancelar -->
       <button type="submit" class="styleButtonEnviar" >Criar Conta</button>
       <br>
       <button type="reset" class="styleButtonLimpar" >Limpar</button>
       <br>
-      <button class="styleButtonCancelar">Cancelar</button>
+      <button class="styleButtonCancelar" type="button" onclick="window.location.href">Cancelar</button>
       
     </div>
 </div>
